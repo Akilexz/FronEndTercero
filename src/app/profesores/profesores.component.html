@@ -1,0 +1,24 @@
+<title>
+    Formulario de Profesionales</title>
+<h1>Registro</h1>
+<label>identificacion</label>
+<br>
+<input type="text" [(ngModel)]="profesores.identificacion" name="identificacion" id="identificacion" placeholder="Ingrese sus cedula">
+<br>
+<label>Nombre</label>
+<br>
+<input type="text" [(ngModel)]="profesores.nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+<br>
+<label>Apellido</label>
+<br>
+<input type="text" [(ngModel)]="profesores.apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+<br>
+<label>Email</label>
+<br>
+<input type="email" [(ngModel)]="profesores.email" name="email" id="email" placeholder="Ingrese su email">
+<br>
+<label>Titulos Profesionales</label>
+<br>
+<input type="titulosProfesionaels" [(ngModel)]="profesores.titulosProfesionaels" name="titulosProfesionaels" id="titulosProfesionaels" placeholder="Ingrese sus Titulos">
+<br>
+<input type="submit" value="enviar" (click)="Guardar()">

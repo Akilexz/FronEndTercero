@@ -1,0 +1,17 @@
+<body>
+    <div *ngFor="let item of table_asistencias">
+        <!-- <h1>{{item.tituloCronograma}}</h1> -->
+    </div>
+    <tr *ngFor="let item of respuestaCliente">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.apellido}}</td>
+        <td>{{item.hora}}</td>
+        <td>{{item.identificacion}}</td>
+        <td>{{item.email}}</td>
+
+        <td>
+            <div class="link">
+                <a (click)="cambiar()">Asistir</a>
+            </div>
+</body>

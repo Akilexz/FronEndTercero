@@ -6,11 +6,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClienteComponent } from './cliente/cliente.component';
+import { ProfesoresComponent } from './profesores/profesores.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from '../app/admin/login/login.component';
+import { EditarProfesorComponent } from './admin/editar-profesor/editar-profesor.component';
+import { EditarClienteComponent } from './admin/editar-cliente/editar-cliente.component';
+import { GestionGeneralComponent } from './admin/gestion-general/gestion-general.component';
+import { AsistenciasComponent } from './asistencias/asistencias.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteComponent
+    ClienteComponent,
+    ProfesoresComponent,
+    HomeComponent,
+    LoginComponent,
+    EditarProfesorComponent,
+    EditarClienteComponent,
+    GestionGeneralComponent,
+    AsistenciasComponent
   ],
   imports: [
     BrowserModule,
