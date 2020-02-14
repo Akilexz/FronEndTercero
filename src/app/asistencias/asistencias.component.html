@@ -1,17 +1,28 @@
 <body>
-    <div *ngFor="let item of table_asistencias">
-        <!-- <h1>{{item.tituloCronograma}}</h1> -->
-    </div>
-    <tr *ngFor="let item of respuestaCliente">
-        <td>{{item.id}}</td>
-        <td>{{item.nombre}}</td>
-        <td>{{item.apellido}}</td>
-        <td>{{item.hora}}</td>
-        <td>{{item.identificacion}}</td>
-        <td>{{item.email}}</td>
-
-        <td>
-            <div class="link">
-                <a (click)="cambiar()">Asistir</a>
+    <h1>Asistencia Programada</h1>
+    <div class="aling" *ngFor="let item of respuestaCliente">
+        <div class="logo">
+            <img src="../../assets/imagenes/person-logueo.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="tabla">
+                <div class="titulo">
+                    <h1>{{item.nombre}}</h1>
+                </div>
+                <div class="descripcion">
+                    <ul>
+                        <li>{{item.id}}</li>
+                        <li>{{item.apellido}}</li>
+                        <li>{{item.hora}}</li>
+                        <li>{{item.identificacion}}</li>
+                        <li>{{item.email}}</li>
+                    </ul>
+                </div>
+                <!-- <td> -->
+                <div class="link">
+                    <a (click)="cambiar()">Asistir</a>
+                </div>
             </div>
+        </div>
+    </div>
 </body>

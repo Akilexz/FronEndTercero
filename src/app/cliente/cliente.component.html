@@ -1,25 +1,31 @@
-<title>
-    Formulario de Cliente</title>
-<h1>Registro</h1>
-<label>identificacion</label>
-<br>
-<input type="text" [(ngModel)]="clientes.identificacion" name="identificacion" id="identificacion" placeholder="Ingrese sus cedula">
-<br>
-<label>Nombre</label>
-<br>
-<input type="text" [(ngModel)]="clientes.nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre">
-<br>
-<label>Apellido</label>
-<br>
-<input type="text" [(ngModel)]="clientes.apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
-<br>
-<label>Hora En La Que Quiera Asistir</label>
-<br>
-<input type="time" [(ngModel)]="clientes.hora" name="hora" id="hora">
-<br>
-<label>Email</label>
-<br>
-<input type="email" [(ngModel)]="clientes.email" name="email" id="email" placeholder="Ingrese su email">
-<br>
-<br>
-<input type="submit" value="enviar" (click)="Guardar()">
+<body>
+    <div class="form">
+        <title>
+            Formulario de Cliente</title>
+        <h1>Registro</h1>
+        <form action="">
+            <p>identificacion</p>
+            <br>
+            <input type="text" [(ngModel)]="clientes.identificacion" name="identificacion" id="identificacion" placeholder="Ingrese sus cedula">
+            <br>
+            <p>Nombre</p>
+            <br>
+            <input type="text" [(ngModel)]="clientes.nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <br>
+            <p>Apellido</p>
+            <br>
+            <input type="text" [(ngModel)]="clientes.apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+            <br>
+            <p>Hora En La Que Quiera Asistir</p>
+            <br>
+            <input type="time" [(ngModel)]="clientes.hora" name="hora" id="hora">
+            <br>
+            <p>Email</p>
+            <br>
+            <input type="email" [(ngModel)]="clientes.email" name="email" id="email" placeholder="Ingrese su email">
+            <br>
+            <br>
+            <input type="submit" value="enviar" (click)="Guardar()">
+        </form>
+    </div>
+</body>

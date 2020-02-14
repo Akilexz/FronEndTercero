@@ -1,17 +1,31 @@
-<body>
-    <div *ngFor="let item of table_asistencias">
-        <!-- <h1>{{item.tituloCronograma}}</h1> -->
-    </div>
-    <tr *ngFor="let item of respuestaDocente">
-        <td>{{item.id}}</td>
-        <td>{{item.nombre}}</td>
-        <td>{{item.apellido}}</td>
-        <td>{{item.titulosProfesionaels}}</td>
-        <td>{{item.identificacion}}</td>
-        <td>{{item.email}}</td>
-
-        <td>
-            <div class="link">
-                <a (click)="cambiar()">Asistir</a>
-            </div>
-</body>
+<div class="div">
+    <h2>Docentes</h2>
+    <table>
+        <thead *ngFor="let item of parametrosDocentes">
+            <th>{{item.id}}</th>
+            <th>{{item.nombre}}</th>
+            <th>{{item.apellido}}</th>
+            <th>{{item.titulosProfesionales}}</th>
+            <th>{{item.identificacion}}</th>
+            <th>{{item.email}}</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of respuestaDocente">
+                <td>{{item.id}}</td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+                <td>{{item.titulosProfesionaels}}</td>
+                <td>{{item.identificacion}}</td>
+                <td>{{item.email}}</td>
+                <td>
+                    <button value="Editar" title="Actualizar" class="form-control" (click)="editar(item.id)">Editar</button>
+                </td>
+                <td>
+                    <button value="Eliminar" title="Eliminar" class="form-control" (click)="borrarDocente(item.id)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -13,9 +13,9 @@ export class ProfesoresComponent implements OnInit {
   data: any;
   profesores: Profesor;
   tabla: string;
-  clienteForm: FormGroup;
+  profesoresForm: FormGroup;
   FormBuilder: any;
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private formBuilder: FormBuilder) { }
 
   ngOnInit() {
     this.profesores = {
@@ -26,6 +26,7 @@ export class ProfesoresComponent implements OnInit {
       email: '',
     };
     this.tabla = 'profesores';
+
   }
   Guardar = () => {
     this.data = {
@@ -36,6 +37,16 @@ export class ProfesoresComponent implements OnInit {
       console.log(resultado);
       alert ('registro Exitoso');
       this.router.navigate(['']);
+    });
+  }
+
+  formularioProfesores() {
+    this.profesoresForm = this.formBuilder.group({
+      identificacion: ['', [Validators.required]],
+      nombre: ['', [Validators.required]],
+      apellido: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      titulosProfesionaels: ['', [Validators.required]]
     });
   }
 

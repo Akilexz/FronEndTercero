@@ -1,3 +1,5 @@
+import { EditarProfesorComponent } from './admin/editar-profesor/editar-profesor.component';
+import { EditarClienteComponent } from './admin/editar-cliente/editar-cliente.component';
 import { GestionGeneralComponent } from './admin/gestion-general/gestion-general.component';
 import { AsistenciasComponent } from './asistencias/asistencias.component';
 import { LoginComponent } from '../app/admin/login/login.component';
@@ -14,7 +16,8 @@ const routes: Routes = [
   {path: 'profecionales', component: ProfesoresComponent},
   {path: 'login', component: LoginComponent},
   {path: 'asistencias', component: AsistenciasComponent},
-  {path: 'gestionGeneral', component: GestionGeneralComponent}
+  {path: 'gestionGeneral', component: GestionGeneralComponent},
+  {path: 'editarDocente', component: EditarProfesorComponent}
 ];
 
 @NgModule({
