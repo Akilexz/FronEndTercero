@@ -13,6 +13,7 @@ import { EditarProfesorComponent } from './admin/editar-profesor/editar-profesor
 import { EditarClienteComponent } from './admin/editar-cliente/editar-cliente.component';
 import { GestionGeneralComponent } from './admin/gestion-general/gestion-general.component';
 import { AsistenciasComponent } from './asistencias/asistencias.component';
+import { BusquedaPipe } from './pipes/busqueda.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AsistenciasComponent } from './asistencias/asistencias.component';
     EditarProfesorComponent,
     EditarClienteComponent,
     GestionGeneralComponent,
-    AsistenciasComponent
+    AsistenciasComponent,
+    BusquedaPipe
   ],
   imports: [
     BrowserModule,

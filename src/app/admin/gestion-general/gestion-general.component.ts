@@ -18,7 +18,7 @@ export class GestionGeneralComponent implements OnInit {
   deleteProfesor: any;
   datoEliminar: any;
   constructor(private http: HttpClient, private router: Router) { }
-
+  busquedaPost = '';
   ngOnInit() {
     this.traerDocentes();
     this.parametrosDocentes = [
