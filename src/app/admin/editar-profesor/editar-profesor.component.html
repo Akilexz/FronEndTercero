@@ -24,9 +24,9 @@
                     <br>
                     <p>Titulos Profesionales</p>
                     <br>
-                    <input formControlName="titulosProfesionales" type="titulosProfesionaels" [(ngModel)]="item.titulosProfesionales" name="titulosProfesionaels" id="titulosProfesionaels" placeholder="Ingrese sus Titulos">
+                    <input formControlName="titulosProfesionaels" type="text" [(ngModel)]="item.titulosProfesionaels" name="titulosProfesionaels" id="titulosProfesionaels" placeholder="Ingrese sus Titulos">
                     <br>
-                    <input type="submit" value="enviar" (click)="Guardar()">
+                    <input type="submit" value="enviar" (click)="editData(item.id)">
                 </div>
             </div>
         </form>

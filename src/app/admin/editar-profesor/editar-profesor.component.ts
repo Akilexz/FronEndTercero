@@ -35,7 +35,7 @@ export class EditarProfesorComponent implements OnInit {
       apellido: ['', [Validators.required]],
       email: ['', [Validators.required]],
       identificacion: ['', [Validators.required]],
-      titulosProfesionales: ['', [Validators.required]]
+      titulosProfesionaels: ['', [Validators.required]]
     });
   }
   editData = (id) => {
@@ -43,23 +43,24 @@ export class EditarProfesorComponent implements OnInit {
     const nombre = this.editarForm.get('nombre').value;
     const apellido = this.editarForm.get('apellido').value;
     const email = this.editarForm.get('email').value;
-    const identificaicon = this.editarForm.get('identificaicon').value;
-    const titulosProfesionales = this.editarForm.get('titulosProfesionales').value;
+    const identificacion = this.editarForm.get('identificacion').value;
+    const titulosProfesionaels = this.editarForm.get('titulosProfesionaels').value;
     this.data = {
       tabla: this.tabla,
       datoId: [{
+        id:id,
         nombre:nombre,
         apellido:apellido,
         email: email,
-        identificacion: identificaicon,
-        titulosProfesionales: titulosProfesionales
+        identificacion:identificacion,
+        titulosProfesionaels: titulosProfesionaels
       }]
     };
-    if(this.data === null){
+    if (this.data === null) {
       console.log('datos no encontrados');
     } else {
       console.log(this.data);
-      this.http.put(environment.ApI_URL + 'put', this.data).subscribe(resultado =>{
+      this.http.put(environment.ApI_URL + 'put', this.data).subscribe(resultado => {
         console.log(resultado);
         alert('datos editados');
         this.router.navigate(['gestionGeneral']);
