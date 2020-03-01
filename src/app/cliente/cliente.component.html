@@ -3,29 +3,64 @@
         <title>
             Formulario de Cliente</title>
         <h1>Registro</h1>
-        <form action="">
+        <form [formGroup]="clienteForm" (ngSubmit)="Guardar()">
             <p>identificacion</p>
             <br>
-            <input type="text" [(ngModel)]="clientes.identificacion" name="identificacion" id="identificacion" placeholder="Ingrese sus cedula">
+            <input formControlName="identificacion" type="text" [(ngModel)]="clientes.identificacion" name="identificacion" id="identificacion" placeholder="Ingrese sus cedula">
+            <div class="alert-danger" *ngIf="identificacion.invalid &&(identificacion.dirty || identificacion.touched)">
+                <div class="container-error-mensage " *ngIf="identificacion.errors.required"> identificacion es requerida
+                </div>
+                <div class="container-error-mensage " *ngIf="identificacion.invalid && (identificacion.dirty || identificacion.touched)">
+                    identificacion no valida
+                </div>
+            </div>
             <br>
             <p>Nombre</p>
             <br>
-            <input type="text" [(ngModel)]="clientes.nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <input formControlName="nombre" type="text" [(ngModel)]="clientes.nombre" name="nombre" id="nombre" placeholder="Ingrese su nombre">
+            <div class="alert-danger" *ngIf="nombre.invalid &&(nombre.dirty || nombre.touched)">
+                <div class="container-error-mensage " *ngIf="nombre.errors.required"> Nombre es requerida
+                </div>
+                <div class="container-error-mensage " *ngIf="nombre.invalid">
+                    Nombre necesita almenos 4 letras
+                </div>
+            </div>
             <br>
             <p>Apellido</p>
             <br>
-            <input type="text" [(ngModel)]="clientes.apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+            <input formControlName="apellido" type="text" [(ngModel)]="clientes.apellido" name="apellido" id="apellido" placeholder="Ingrese su apellido">
+            <div class="alert-danger" *ngIf="apellido.invalid &&(apellido.dirty || apellido.touched)">
+                <div class="container-error-mensage " *ngIf="apellido.errors.required"> Apellido es requerida
+                </div>
+                <div class="container-error-mensage " *ngIf="apellido.invalid">
+                    Apellido necesita almenos 4 letras
+                </div>
+            </div>
             <br>
             <p>Hora En La Que Quiera Asistir</p>
             <br>
-            <input type="time" [(ngModel)]="clientes.hora" name="hora" id="hora">
+            <input formControlName="hora" type="time" [(ngModel)]="clientes.hora" name="hora" id="hora">
+            <div class="alert-danger" *ngIf="hora.invalid &&(hora.dirty || hora.touched)">
+                <div class="container-error-mensage " *ngIf="hora.invalid"> Hora es requerida
+                </div>
+            </div>
             <br>
             <p>Email</p>
             <br>
-            <input type="email" [(ngModel)]="clientes.email" name="email" id="email" placeholder="Ingrese su email">
+            <input formControlName="email" type="email" [(ngModel)]="clientes.email" name="email" id="email" placeholder="Ingrese su email">
+            <div class="alert-danger" *ngIf="email.invalid &&(email.dirty || email.touched)">
+                <div class="container-error-mensage " *ngIf="email.errors.required"> Email es requerida
+                </div>
+                <div class="container-error-mensage " *ngIf="email.valid">
+                    El email necesita almenos 5 letras
+                </div>
+                <div class="container-error-mensage " *ngIf="(email.dirty || email.touched) && email.invalid && email.errors.pattern">
+                    Email valida
+                </div>
+            </div>
             <br>
             <br>
-            <input type="submit" value="enviar" (click)="Guardar()">
+            <input type="submit" value="enviar">
         </form>
     </div>
 </body>
